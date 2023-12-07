@@ -1,0 +1,240 @@
+@charset "utf-8";
+
+/* h1 */
+
+h1 {
+  font-size: 36px;
+}
+
+.kihon {
+  margin: 32px 0 0 0;
+  border: solid 2px;
+  background: lightgray;
+  animation: kihon 2s infinite alternate;
+  width: 400px;
+  text-align: center;
+  border-radius: 6px;
+}
+
+@keyframes kihon {
+  100% {
+    opacity: 0.1;
+    transform: translateY(-32px);
+  }
+}
+
+.box-run {
+  margin-top: 16px;
+  border: solid 2px;
+  background: lightgray;
+  border-radius: 6px;
+  width: 400px;
+  overflow: hidden;
+}
+
+.h1-run {
+  transform: translateX(500px);
+  animation: h1-run 1500ms infinite linear;
+}
+
+@keyframes h1-run {
+  to {
+    transform: translateX(-200px);
+  }
+}
+
+.box-tekitou {
+  margin-top: 16px;
+  border: solid 2px;
+  background: lightgray;
+  border-radius: 6px;
+  width: 400px;
+  text-align: center;
+}
+
+.teki {
+  display: inline-block;
+  animation: teki 2s infinite linear;
+}
+
+@keyframes teki {
+  to {
+    transform: rotateX(360deg) rotate(360deg);
+  }
+}
+
+.tou {
+  display: inline-block;
+  animation: tou 2s infinite linear;
+}
+
+@keyframes tou {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+/* img */
+
+/* kihon */
+
+.box-kihon {
+  width: 400px;
+  border: 2px solid;
+}
+
+.lightning {
+  animation: lightning 2s infinite alternate;
+}
+
+@keyframes lightning {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.jump {
+  animation: jump 2s infinite alternate;
+}
+
+@keyframes jump {
+  to {
+    transform: translateY(-32px);
+  }
+}
+
+.spin {
+  animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.size {
+  animation: size 3s infinite alternate;
+  transform: scale(0.1);
+}
+
+@keyframes size {
+  to {
+    transform: scale(1.7);
+  }
+}
+
+.spin-x {
+  animation: spin-x 2s infinite linear;
+}
+
+@keyframes spin-x {
+  to {
+    transform: rotateX(360deg);
+  }
+}
+
+.spin-y {
+  animation: spin-y 2s infinite linear;
+}
+
+@keyframes spin-y {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+/* run */
+
+.run {
+  width: 400px;
+  overflow: hidden;
+  display: flex;
+  border: 2px solid;
+}
+
+.run1 {
+  animation: run-left 2s infinite;
+  transform: translateX(-200px);
+}
+
+@keyframes run-left {
+  0% {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(800px);
+  }
+}
+
+.run2 {
+  animation: run-right 5s infinite;
+  transform: translateX(600px);
+}
+
+@keyframes run-right {
+  0% {
+    transform: translateX(600px);
+  }
+  40% {
+    transform: translateX(200px);
+  }
+  60% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(-600px);
+  }
+}
+
+/* tekitou */
+
+.box-movearound {
+  width: 400px;
+  height: 400px;
+  border: 2px solid;
+}
+
+.movearound {
+  animation: movearound 8s infinite alternate;
+}
+
+@keyframes movearound {
+  10% {
+    transform: translate(150px, 150px);
+  }
+  20% {
+    transform: translate(0, 300px);
+  }
+  30% {
+    transform: translate(0, 150px) rotate(180deg);
+  }
+  40% {
+    troansform: translate(75px, 75px) scale(2);
+  }
+  50% {
+    transform: translate(300px, 0) scale(0.2) rotate(-360deg);
+  }
+  60% {
+    transform: translate(300px, 300px) scale(0.7) rotate(180deg);
+  }
+  70% {
+    transform: translate(150px 300px) scale(2) rotateX(360deg);
+  }
+  80% {
+    transform: translate(150px, 0) scale(2) rotateX(360deg) rotateY(360deg);
+  }
+  90% {
+    transform: translate(150px, 0) scale(0.7) rotateX(-360deg) rotateY(-360deg);
+  }
+  to {
+    transform: translate(none);
+  }
+}
